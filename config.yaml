@@ -1,0 +1,38 @@
+gateways:
+  bigquery:
+    connection:
+      # For more information on configuring the connection to your execution engine, visit:
+      # https://sqlmesh.readthedocs.io/en/stable/reference/configuration/#connections
+      # https://sqlmesh.readthedocs.io/en/stable/integrations/engines/bigquery/#connection-options
+      type: bigquery
+      # concurrent_tasks: 1
+      # register_comments: True
+      # pre_ping: False
+      # pretty_sql: False
+      method: oauth
+      project: data-tribe-sandbox-438709
+      # execution_project:
+      # quota_project:
+      location: asia-southeast1
+      # keyfile:
+      # keyfile_json:
+      # token:
+      # refresh_token:
+      # client_id:
+      # client_secret:
+      # token_uri:
+      # scopes:
+      # impersonated_service_account:
+      # job_creation_timeout_seconds:
+      # job_execution_timeout_seconds:
+      # job_retries: 1
+      # job_retry_deadline_seconds:
+      # priority:
+      # maximum_bytes_billed:
+
+
+default_gateway: bigquery
+
+model_defaults:
+  dialect: bigquery
+  start: 2025-05-18
