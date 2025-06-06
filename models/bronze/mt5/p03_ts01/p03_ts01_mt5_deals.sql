@@ -7,6 +7,10 @@ MODEL (
     partition_by_time_column false
   ),
   partitioned_by (DATE_TRUNC(timemsc, MONTH)),
+  column_descriptions (
+    deal = 'Unique identifier for the deal (change desc)',
+    timestamp = 'Timestamp of the deal'
+  ),
   start '2024-01-01',
   cron '*/5 * * * *',
   signals [
